@@ -167,7 +167,7 @@ def tool():
          print("")
          return ''
      except Exception as e:
-         print(f"Une erreur s'est produite lors de la lecture du fichier de user-agents : {e}")
+         print(f"An error occurred while reading the user-agents file: {e}")
          return ''
  
      print(useragent())
