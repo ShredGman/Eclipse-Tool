@@ -46,7 +46,7 @@ git clone --recursive https://github.com/ShredGman/Eclipse-Tool.git
 ```
 Then enter the directory:
 ```shell
-cd Eclipse-Tool
+cd Eclipse-Tool-main
 ```
 Finally just run Setup.bat and wait for it to complete.
 
