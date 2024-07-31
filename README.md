@@ -22,13 +22,13 @@
 <p align="center">
   <a href="ZhvDGJDCRy">
     <img alt="Discord" src="https://img.shields.io/discord/1162965611626893342?label=&logo=discord&logoColor=ffffff&color=C50F1f&labelColor=C50F1f">
-    <img alt="lines" src="https://i.ibb.co/DzRyPq8/output-onlinepngtools-2.png">
+    <img alt="lines" src="https://sloc.xyz/github/ShredGman/Eclipse-Tool">
 </p>
 
 
 # Preview  (page2 on [Releases](https://github.com/ShredGman/Eclipse-Tool/releases))📸
 <p align="center">
-<img src="https://i.ibb.co/tzXSTSY/image-2024-07-30-173318925.png">
+<img src="https://i.ibb.co/DzRyPq8/output-onlinepngtools-2.png">
 </p>
 
 Welcome to Eclipse, a multifunctional tool with a multitude of options. All functions are unrestricted, and you will not have locks on your tokens. This tool can be used with or without proxies. We hope you enjoy it, and feel free to give it a star.
