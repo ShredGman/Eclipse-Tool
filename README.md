@@ -1,7 +1,7 @@
 
 <br/>
 <p align="center">
-  <a href="[https://github.com/SHREK-TM/Shrek-Tools](https://github.com/ShredGman/Eclipse-Tool/)">
+  <a href="https://github.com/ShredGman/Eclipse-Tool/">
     <img src="https://png.pngtree.com/png-clipart/20230120/ourmid/pngtree-total-solar-eclipse-realistic-illustration-png-image_6561454.png" alt="Logo" width="200" height="200">
   </a>
 
