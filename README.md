@@ -59,7 +59,7 @@ By using Eclipse Tool, you agree that you hold responsibility and accountability
 
 ## License 📃
 
-Distributed under the MIT License. See [LICENSE](https://github.com/ShredGman/Eclipse-Tool/blob/main/LICENSE) for more information
+Distributed under the GPL-3.0 License. See [LICENSE](https://github.com/ShredGman/Eclipse-Tool/blob/main/LICENSE) for more information
 
 # Donation 🤑
 ```
