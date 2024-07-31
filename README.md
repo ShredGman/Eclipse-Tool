@@ -63,7 +63,8 @@ Distributed under the MIT License. See [LICENSE](https://github.com/ShredGman/Ec
 
 # Donation 🤑
 ```
-ETH: 0x0C143Ee5b0CAa2633A4Fd1CB34BBE98Ed9597B34
-BTC: bc1ql0as4mpmhwy7fr352dy9jekftpye5l2egl46f2
+ETH: 0xd5D5931c7c798b399b517D6850eb268231174442
+BTC: 3GQ62f9CLSGhGTBDeGycGYSZNZ97B5SNTs
+LTC: MWYhLGJXVTQFDxHhj2gFitLPaCcaKyDKs1
 
 ```
