@@ -41,7 +41,7 @@ def search_for_updates():
                 ██║╚██╗██║██╔══╝  ██║███╗██║    ██║   ██║██╔═══╝ ██║  ██║██╔══██║   ██║   ██╔══╝  ╚═╝
                 ██║ ╚████║███████╗╚███╔███╔╝    ╚██████╔╝██║     ██████╔╝██║  ██║   ██║   ███████╗██╗
                 ╚═╝  ╚═══╝╚══════╝ ╚══╝╚══╝      ╚═════╝ ╚═╝     ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝
-                              {Fore.RED}Looks like this Shrek-Tools {THIS_VERSION} is outdated """.replace(
+                              {Fore.RED}Looks like this Eclipse Tool {THIS_VERSION} is outdated """.replace(
                 "█", f"{Fore.WHITE}█{Fore.GREEN}"
             ),
             end="\n\n",
@@ -56,37 +56,35 @@ def search_for_updates():
             print(f"\n                               {Fore.GREEN}[{Fore.WHITE}+{Fore.GREEN}] {Fore.WHITE} Updating Eclipse Tool...")
 
             if os.path.basename(sys.argv[0]).endswith("exe"):
-                with open("Shrek-Tools.zip", 'wb')as zipfile:
+                with open("Eclipse-Tool.zip", 'wb')as zipfile:
                     zipfile.write(requests.get(update_url).content)
-                with ZipFile("Shrek-Tools.zip", 'r') as filezip:
+                with ZipFile("Eclipse-Tool.zip", 'r') as filezip:
                     filezip.extractall()
-                os.remove("Shrek-Tools.zip")
-                cwd = os.getcwd()+'\\Shrek-Tools\\'
+                os.remove("Eclipse-Tool.zip")
+                cwd = os.getcwd()+'\\Eclipse-Tool\\'
                 shutil.copyfile(cwd+'Changelog.md', 'Changelog.md')
                 try:
                     shutil.copyfile(cwd+os.path.basename(sys.argv[0]), 'Shrek-Tools.exe')
                 except Exception:
                     pass
                 shutil.copyfile(cwd+'README.md', 'README.md')                   
-                shutil.rmtree('Shrek-Tools')
+                shutil.rmtree('Eclipse-Tool')
                 input(f"                               {Fore.GREEN}[{Fore.WHITE}+{Fore.GREEN}] {Fore.WHITE} Update Successfully Finished!", end="")
-                os.startfile("Shrek-Tools.exe")
+                os.startfile("Eclipse-Tool.exe")
                 os._exit(0)
 
             else:
                 new_version_source = requests.get("https://github.com/blackray207/Shrek-Tools/archive/refs/heads/master.zip")
-                with open("Shrek-Tools-main.zip", 'wb')as zipfile:
+                with open("Eclipse-Tool-main.zip", 'wb')as zipfile:
                     zipfile.write(new_version_source.content)
-                with ZipFile("Shrek-Tools-main.zip", 'r') as filezip:
+                with ZipFile("Eclipse-Tool-main.zip", 'r') as filezip:
                     filezip.extractall()
-                os.remove("Shrek-Tools-main.zip")
+                os.remove("Eclipse-Tool-main.zip")
                 cwd = os.getcwd()+'\\Shrek-Tools-main'
                 shutil.copytree(cwd, os.getcwd(), dirs_exist_ok=True)
                 shutil.rmtree(cwd)
                 input(f"                               {Fore.GREEN}[{Fore.WHITE}+{Fore.GREEN}] {Fore.WHITE} Update Successfully Finished!")
                 print(f'                               {Fore.GREEN}[{Fore.WHITE}+{Fore.GREEN}] {Fore.WHITE} Press ENTER to View New Update!')
-                if os.path.exists(os.getcwd()+'Setup.bat'):
-                    os.startfile("Setup.bat")
-                elif os.path.exists(os.getcwd()+'Start.bat'):
-                    os.startfile("Start.bat")
+                os.startfile("SETUP+RUN.bat")
+
                 os._exit(0)
