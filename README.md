@@ -2,7 +2,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/ShredGman/Eclipse-Tool/">
-    <img src="https://png.pngtree.com/png-clipart/20230120/ourmid/pngtree-total-solar-eclipse-realistic-illustration-png-image_6561454.png" alt="Logo" width="200" height="200">
+    <img src="https://github.com/user-attachments/assets/27467bc3-e4ff-49ad-80c9-207d881a2a82" alt="Logo" width="200" height="200">
   </a>
 
   <h3 align="center">Eclipse Tool</h3>
