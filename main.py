@@ -3957,6 +3957,5 @@ Press ENTER to continue... ''')
 tool()
 while __name__ == '__main__':
     print(Fore.YELLOW)
-    os.system('pause')
-    subprocess.run(['python', 'utilities/Plugins/build.py'], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)	
+    os.system('pause')	
     tool()
