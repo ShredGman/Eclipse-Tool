@@ -2,7 +2,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/ShredGman/Eclipse-Tool/">
-    <img src="https://github.com/user-attachments/assets/8f3c3bc9-be98-44b9-a15f-4809bebe6e6a" alt="Logo" width="500" height="500">
+    <img src="https://github.com/user-attachments/assets/8f3c3bc9-be98-44b9-a15f-4809bebe6e6a" alt="Logo" width="400" height="400">
   </a>
 
   <h3 align="center">Eclipse Tool</h3>
