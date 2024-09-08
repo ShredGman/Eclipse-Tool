@@ -14,8 +14,8 @@
 
 <p align="center">
   <img alt="Downloads" src="https://img.shields.io/github/downloads/ShredGman/Eclipse-Tool/total?color=ff4500&logoColor=ffffff">
-  <img alt="Forks" src="https://img.shields.io/github/forks/ShredGman/Eclipse-Tool?style=social&color=ff4500&logoColor=ffffff">
-  <img alt="Stargazers" src="https://img.shields.io/github/stars/ShredGman/Eclipse-Tool?style=social&color=ff4500&logoColor=ffffff">
+  <img alt="Forks" src="https://img.shields.io/github/forks/ShredGman/Eclipse-Tool?style=social">
+  <img alt="Stargazers" src="https://img.shields.io/github/stars/ShredGman/Eclipse-Tool?style=social">
   <img alt="License" src="https://img.shields.io/github/license/ShredGman/Eclipse-Tool?color=ff4500&logoColor=ffffff">
 </p>
 
