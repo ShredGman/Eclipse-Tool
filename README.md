@@ -22,7 +22,7 @@
 <p align="center">
   <a href="https://discord.gg/ZhvDGJDCRy">
     <img alt="Discord" src="https://img.shields.io/discord/1162965611626893342?label=&logo=discord&logoColor=ffffff&color=ff4500&labelColor=ff4500">
-    <img alt="lines" src="https://sloc.xyz/github/ShredGman/Eclipse-Tool">
+    <img alt="lines" src="https://sloc.xyz/github/ShredGman/Eclipse-Tool?color=ff4500&labelColor=ff4500">
   </a>
 </p>
 
