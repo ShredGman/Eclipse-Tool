@@ -13,16 +13,17 @@
 </p>
 
 <p align="center">
-  <img alt="Downloads" src="https://img.shields.io/github/downloads/ShredGman/Eclipse-Tool/total">
-  <img alt="Forks" src="https://img.shields.io/github/forks/ShredGman/Eclipse-Tool?style=social">
-  <img alt="Stargazers" src="https://img.shields.io/github/stars/ShredGman/Eclipse-Tool?style=social">
-  <img alt="License" src="https://img.shields.io/github/license/ShredGman/Eclipse-Tool">
+  <img alt="Downloads" src="https://img.shields.io/github/downloads/ShredGman/Eclipse-Tool/total?color=ff4500&logoColor=ffffff">
+  <img alt="Forks" src="https://img.shields.io/github/forks/ShredGman/Eclipse-Tool?style=social&color=ff4500&logoColor=ffffff">
+  <img alt="Stargazers" src="https://img.shields.io/github/stars/ShredGman/Eclipse-Tool?style=social&color=ff4500&logoColor=ffffff">
+  <img alt="License" src="https://img.shields.io/github/license/ShredGman/Eclipse-Tool?color=ff4500&logoColor=ffffff">
 </p>
 
 <p align="center">
-  <a href="ZhvDGJDCRy">
-    <img alt="Discord" src="https://img.shields.io/discord/1162965611626893342?label=&logo=discord&logoColor=ffffff&color=C50F1f&labelColor=C50F1f">
+  <a href="https://discord.gg/ZhvDGJDCRy">
+    <img alt="Discord" src="https://img.shields.io/discord/1162965611626893342?label=&logo=discord&logoColor=ffffff&color=ff4500&labelColor=ff4500">
     <img alt="lines" src="https://sloc.xyz/github/ShredGman/Eclipse-Tool">
+  </a>
 </p>
 
 
