@@ -64,8 +64,8 @@ Distributed under the GPL-3.0 License. See [LICENSE](https://github.com/ShredGma
 
 # Donation 🤑
 ```
-ETH: 0xd5D5931c7c798b399b517D6850eb268231174442
-BTC: 3GQ62f9CLSGhGTBDeGycGYSZNZ97B5SNTs
+ETH: ETH_Address
+BTC: bc1qjuqhr3ueyr7kqa8c22ur5rydef4yt9ttfprku9
 LTC: MWYhLGJXVTQFDxHhj2gFitLPaCcaKyDKs1
 
 ```
