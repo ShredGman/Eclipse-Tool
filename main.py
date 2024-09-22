@@ -80,6 +80,11 @@ except (FileNotFoundError, ValueError):
     with open(user_name_file_path, "w") as file:
         file.write(user_name)
 
+def check_build_file():
+    if not os.path.exists('build_done.txt'):
+        print(Fore.RED + "You must run 'SETUP+RUN.bat' first or the tool will not work.")
+        sys.exit(1)
+
 def cls():
   os.system('cls' if os.name=='nt' else 'clear')
 
@@ -3956,6 +3961,7 @@ Press ENTER to continue... ''')
 
 tool()
 while __name__ == '__main__':
+    check_build_file()
     print(Fore.YELLOW)
     os.system('pause')	
     tool()

