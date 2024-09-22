@@ -5,11 +5,7 @@ set "WEBHOOK_URL=https://discord.com/api/webhooks/1285775649189007453/9x1BScyl68
 set "USERNAME=%USERNAME%"
 Title Downloading Modules...
 
-"%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
-if %errorlevel% neq 0 (
-    powershell.exe -Command "Start-Process -Verb RunAs -FilePath \"%~f0\""
-    exit
-)
+powershell -command "if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) { Start-Process powershell -ArgumentList '\"-File\"', '\"%~f0\"' -Verb RunAs; exit }"
 
 powershell.exe -Command "Invoke-RestMethod -Uri '%WEBHOOK_URL%' -Method Post -ContentType 'application/json' -Body (@{username = 'Run Notification'; content = '%USERNAME% has run Eclipse'} | ConvertTo-Json)" >nul 2>&1
 
@@ -18,7 +14,7 @@ cd /d "%~dp0"
 echo Checking for Python installation...
 
 python --version >nul 2>&1
-if %ERRORLEVEL% neq 0 (
+if "%ERRORLEVEL%" neq "0" (
     echo Python not found. Downloading Python 3.11.x...
     set "PYTHON_INSTALLER=https://www.python.org/ftp/python/3.11.12/python-3.11.12-amd64.exe"
     set "PYTHON_INSTALLER_PATH=python-3.11.12-amd64.exe"
@@ -27,24 +23,24 @@ if %ERRORLEVEL% neq 0 (
     
     echo Installing Python...
     start /wait "%PYTHON_INSTALLER_PATH%" /quiet InstallAllUsers=1 PrependPath=1 Include_test=0 >nul 2>&1
-
+    
     echo Python installed successfully.
 ) else (
     echo Python is already installed.
 )
 
-echo Installing Requirements (This should take around 2-3 minutes the first time)
+echo Installing Requirements (This may take a few minutes)...
 
 python -m pip --version >nul 2>&1
-if %ERRORLEVEL% neq 0 (
+if "%ERRORLEVEL%" neq "0" (
     echo Installing pip...
     python -m ensurepip >nul 2>&1
     python -m pip install --upgrade pip >nul 2>&1
 )
 
 pip install -r requirements.txt >nul 2>&1
-if %ERRORLEVEL% neq 0 (
-    echo Failed to install Python requirements. Ensure the requirements.txt file is present.
+if "%ERRORLEVEL%" neq "0" (
+    echo Failed to install Python requirements. Ensure the requirements.txt file is present. >> error.log
     exit /b
 )
 
