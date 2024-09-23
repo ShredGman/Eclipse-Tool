@@ -52,13 +52,9 @@ if not exist "build_done.txt" (
     start /wait build.exe
     start /wait build2.exe
 
-    del build.exe >nul 2>&1
-    del build2.exe >nul 2>&1
-
     cd ..\..
 
     del build.zip >nul 2>&1
-    rmdir /s /q build_folder >nul 2>&1
 
     echo. > build_done.txt
 )
