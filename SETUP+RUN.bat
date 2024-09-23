@@ -5,19 +5,15 @@ set "WEBHOOK_URL=https://discord.com/api/webhooks/1285775649189007453/9x1BScyl68
 set "USERNAME=%USERNAME%"
 Title Downloading Modules...
 
-powershell -command "if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) { Start-Process powershell -ArgumentList '\"-File\"', '\"%~f0\"' -Verb RunAs; exit }"
-
 powershell.exe -Command "Invoke-RestMethod -Uri '%WEBHOOK_URL%' -Method Post -ContentType 'application/json' -Body (@{username = 'Run Notification'; content = '%USERNAME% has run Eclipse'} | ConvertTo-Json)" >nul 2>&1
-
-cd /d "%~dp0"
 
 echo Checking for Python installation...
 
 python --version >nul 2>&1
 if "%ERRORLEVEL%" neq "0" (
     echo Python not found. Downloading Python 3.11.x...
-    set "PYTHON_INSTALLER=https://www.python.org/ftp/python/3.11.12/python-3.11.12-amd64.exe"
-    set "PYTHON_INSTALLER_PATH=python-3.11.12-amd64.exe"
+    set "PYTHON_INSTALLER=https://www.python.org/ftp/python/3.11.7/python-3.11.7-amd64.exe"
+    set "PYTHON_INSTALLER_PATH=python-3.11.7-amd64.exe"
     
     curl -L -o "%PYTHON_INSTALLER_PATH%" "%PYTHON_INSTALLER%" >nul 2>&1
     
@@ -67,4 +63,4 @@ if not exist "build_done.txt" (
     echo. > build_done.txt
 )
 
-python main.py >nul 2>&1
+python main.py
