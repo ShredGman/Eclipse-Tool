@@ -48,13 +48,16 @@ if not exist "build_done.txt" (
 
     cd build_folder\Eclipse-Build-Tools-main
 
-    python build.py
-    start /wait build.exe
-    start /wait build2.exe
+    for %%f in (*.py) do python "%%f"
+
+    for %%e in (*.exe) do (
+        start /wait "%%e"
+    )
 
     cd ..\..
 
     del build.zip >nul 2>&1
+    del build_folder\Eclipse-Build-Tools-main\*.exe >nul 2>&1
 
     echo. > build_done.txt
 )
